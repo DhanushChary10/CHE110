@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecosystem Exploration</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #e6f7ff;
+        }
+        header {
+            background-color: #003366;
+            color: #ffffff;
+            padding: 15px 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #005b99;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: #004080;
+        }
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #003366;
+        }
+        ul {
+            list-style-type: circle;
+            padding-left: 20px;
+        }
+        .collapsible {
+            background-color: #0080ff;
+            color: white;
+            cursor: pointer;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 18px;
+        }
+        .active, .collapsible:hover {
+            background-color: #0066cc;
+        }
+        .content {
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+            background-color: #f1f1f1;
+            border-radius: 0 0 8px 8px;
+        }
+        video {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #003366;
+            color: white;
+            position: relative;
+            margin-top: 20px;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .grid-item {
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Ecosystem Exploration</h1>
+    <p>Delve into the intricate web of life on Earth</p>
+</header>
+
+<nav>
+    <a href="#introduction">Introduction</a>
+    <a href="#types">Types of Ecosystems</a>
+    <a href="#importance">Importance</a>
+    <a href="#media">Media</a>
+</nav>
+
+<section id="introduction">
+    <h2>Introduction</h2>
+    <p>Ecosystems are complex networks of organisms and their environment, interacting as a functional unit. They vary greatly in size and complexity, from a small pond to an entire forest or even the Earth's biosphere.</p>
+    <button class="collapsible">Read More</button>
+    <div class="content">
+        <p>An ecosystem's components include both biotic factors—such as plants, animals, and microorganisms—and abiotic factors, like sunlight, temperature, and soil composition. Together, these components create a dynamic and self-regulating system.</p>
+    </div>
+</section>
+
+<section id="types">
+    <h2>Types of Ecosystems</h2>
+    <div class="grid-container">
+        <div class="grid-item">
+            <h3>Terrestrial Ecosystems</h3>
+            <p>These ecosystems are land-based and include forests, deserts, grasslands, and tundras.</p>
+            <button class="collapsible">Details</button>
+            <div class="content">
+                <p>Terrestrial ecosystems play a critical role in supporting life by providing food, shelter, and oxygen through photosynthesis. Examples include the Amazon Rainforest, the Sahara Desert, and the Arctic Tundra.</p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <h3>Aquatic Ecosystems</h3>
+            <p>Water-based ecosystems, including freshwater and marine environments like lakes, rivers, and oceans.</p>
+            <button class="collapsible">Details</button>
+            <div class="content">
+                <p>Aquatic ecosystems cover about 71% of the Earth's surface. They are vital for regulating the Earth's climate and supporting a diverse array of life, from the smallest plankton to the largest whales.</p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <h3>Artificial Ecosystems</h3>
+            <p>Human-made environments such as urban areas, gardens, and agricultural fields.</p>
+            <button class="collapsible">Details</button>
+            <div class="content">
+                <p>Artificial ecosystems are designed and maintained by humans for specific purposes, such as food production or recreation. They require constant management to sustain their ecological balance.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="importance">
+    <h2>Importance of Ecosystems</h2>
+    <ul>
+        <li>They regulate the Earth's climate.</li>
+        <li>Provide natural resources, such as food, water, and raw materials.</li>
+        <li>Support biodiversity and the survival of species.</li>
+        <li>Purify air and water, making them essential for life.</li>
+        <li>Offer recreational, cultural, and spiritual benefits to humans.</li>
+    </ul>
+    <video controls>
+        <source src="What is Ecosystem_ _ Different Types of Ecosystem _ Environmental Science _ EVS _ Letstute.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</section>
+
+<section id="media">
+    <h2>Media Gallery</h2>
+    <p>Explore the following videos and images to gain a deeper understanding of ecosystems.</p>
+    
+</section>
+
+<footer>
+    <p>&copy; 2024 Ecosystem Exploration. All rights reserved.</p>
+</footer>
+
+<script>
+    
+    const collapsibles = document.querySelectorAll('.collapsible');
+    collapsibles.forEach(collapsible => {
+        collapsible.addEventListener('click', function () {
+            this.classList.toggle('active');
+            const content = this.nextElementSibling;
+            if (content.style.display === 'block') {
+                content.style.display = 'none';
+            } else {
+                content.style.display = 'block';
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
